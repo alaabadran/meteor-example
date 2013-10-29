@@ -1,6 +1,9 @@
 meteor-example
 ==============
 
-Meteor JS example
+Meteor JS examples
 
+
+- Todo List app
+- Account management app
 
