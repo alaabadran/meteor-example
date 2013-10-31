@@ -1,9 +1,12 @@
 <head>
-  <title>todo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Todo App</title>
 </head>
 
 <body>
-  {{> hello}}
+    {{> page_header}}
+    {{ yield }}
 </body>
 
 <template name="hello">
@@ -11,3 +14,14 @@
   {{greeting}}
   <input type="button" value="Click" />
 </template>
+
+
+
+<template name="loading">
+  <h1>Loading...</h1>
+</template>
+
+<template name="notFound">
+  <h1>Not Found!</h1>
+</template>
+
