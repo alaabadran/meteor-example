@@ -15,4 +15,4 @@ Setup
 
 Installation
 ------------
-Run `mrt update` to install all dependencies.
+Run `mrt install` to install all dependencies.
