@@ -5,7 +5,7 @@ Meteor JS examples
 
 
 - Todo List app
-- Account management app
+- Account management app with multiple accounts login
 
 
 
