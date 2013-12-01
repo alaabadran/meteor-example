@@ -1,3 +1,11 @@
+/*
+ * User: Alaa Badran
+ * Date: 2013-12-01
+ * Time: 15:37:09
+ * Contact: me@alaabadran.com
+ * URL: http://www.alaabadran.com/
+ */
+
 if (Meteor.isClient) {
   Template.hello.greeting = function () {
     return "Welcome to accounts.";
