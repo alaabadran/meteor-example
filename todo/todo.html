@@ -5,12 +5,15 @@
     <title>Todo App</title>
 </head>
 
+<!-- This is the body content -->
 <body>
     {{> page_header}}
     {{ yield }}
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </body>
 
+<!-- This is a template called "layout", it will be rendered if it was called by meteor. -->
+<!-- You can put templates any where or inside any html file. -->
 <template name="layout">
   <h2>My Todos</h2>
   {{#each todos}}
