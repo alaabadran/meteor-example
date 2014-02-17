@@ -6,6 +6,7 @@
  * URL: http://www.alaabadran.com/
  */
 
+// Runs in Client browser.
 if (Meteor.isClient) {
     Router.configure({
         layoutTemplate: 'layout',
@@ -14,6 +15,7 @@ if (Meteor.isClient) {
     });
 }
 
+// All code here runs on Server and Client
 
 Router.map(function () {
     this.route('todos', {
