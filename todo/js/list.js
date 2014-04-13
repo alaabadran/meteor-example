@@ -17,6 +17,7 @@ function myTodos() {
 // This will run in Server-side only
 if (Meteor.isServer) {
     Meteor.publish('my-todos', function() {
+    	// This will return all todos for the current user.
         return Todos.find({
             owner: this.userId
         });
@@ -31,6 +32,7 @@ if(Meteor.isClient){
         // What to run when 
     };
     Template.todo_list.todos = function() {
+    	// Limiting and sorting.
         return Todos.find({done: false}, {limit: 9, sort:{created:-1}});
     };
     // Template.todo_list.events = {}
