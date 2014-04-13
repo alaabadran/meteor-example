@@ -17,7 +17,7 @@ function myTodos() {
 // This will run in Server-side only
 if (Meteor.isServer) {
     Meteor.publish('my-todos', function() {
-    	// This will return all todos for the current user.
+        // This will return all todos for the current user.
         return Todos.find({
             owner: this.userId
         });
@@ -26,13 +26,13 @@ if (Meteor.isServer) {
 
 if(Meteor.isClient){
 
-	Meteor.subscribe('my-todos');
+    Meteor.subscribe('my-todos');
     // Template.todo_list.rendered = function (){}
     Template.todos.rendered = function() {
         // What to run when 
     };
     Template.todo_list.todos = function() {
-    	// Limiting and sorting.
+        // Limiting and sorting.
         return Todos.find({done: false}, {limit: 9, sort:{created:-1}});
     };
     // Template.todo_list.events = {}
