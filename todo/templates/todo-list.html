@@ -1,10 +1,11 @@
 
 <template name="todo_list">
-  <h1>Todo List</h1>
-  <div class="todo-list">
-    <ul>
-    {{#each todo_items }}
-        <li><label><input type="checkbox" name="todos" id="todo_{{id}}">{{ title }}</label></li>
-    {{/each}}
+    <h1>Todo List</h1>
+    <div class="todo-list">
+        <ul>
+        {{#each todo_items }}
+            <li><label><input type="checkbox" name="todos" id="todo_{{id}}">{{ title }}</label></li>
+        {{/each}}
+    </ul>
     </div>
 </template>
