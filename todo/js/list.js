@@ -10,7 +10,20 @@
  * List script
  */
 
+if (Meteor.isServer) {
+    Meteor.publish('my-todos', function() {
+        return Todos.find({
+            owner: this.userId
+        });
+    });
+}
+
 if(Meteor.isClient){
+
+	Meteor.subscribe('my-todos');
     // Template.todo_list.rendered = function (){}
+    Template.todo_list.todos = function() {
+        return Todos.find({done: false}, {limit: 9, sort:{created:-1}});
+    };
     // Template.todo_list.events = {}
 }
