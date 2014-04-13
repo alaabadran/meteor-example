@@ -6,10 +6,15 @@
  * URL: http://www.alaabadran.com/
  */
 
-/**
- * List script
- */
+// Connecting to todos collection
+Todos = new Meteor.Collection('todos');
 
+// this will return all todos
+function myTodos() {
+    return Todos.find();
+}
+
+// This will run in Server-side only
 if (Meteor.isServer) {
     Meteor.publish('my-todos', function() {
         return Todos.find({
@@ -22,6 +27,9 @@ if(Meteor.isClient){
 
 	Meteor.subscribe('my-todos');
     // Template.todo_list.rendered = function (){}
+    Template.todos.rendered = function() {
+        // What to run when 
+    };
     Template.todo_list.todos = function() {
         return Todos.find({done: false}, {limit: 9, sort:{created:-1}});
     };
